@@ -27,7 +27,7 @@
 ///   });
 /// }
 /// ```
-library geoclue;
+library;
 
 export 'src/accuracy_level.dart';
 export 'src/geoclue.dart';
