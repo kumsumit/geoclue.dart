@@ -9,16 +9,16 @@ on:
 
 jobs:
   build-runner:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     container:
       image: dart:stable
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     - run: dart pub get
     - run: dart run build_runner build --delete-conflicting-outputs
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name != 'push'
-    - uses: peter-evans/create-pull-request@v5
+    - uses: peter-evans/create-pull-request@v8
       if: github.event_name != 'pull_request'
       with:
         title: 'Regenerate files'
