@@ -14,7 +14,7 @@ platforms:
 
 dependencies:
   dbus:
-    git: https://github.com/canonical/dbus.dart.git
+    git: https://github.com/kumsumit/dbus.dart.git
   meta: ^1.18.3
 
 dev_dependencies:
